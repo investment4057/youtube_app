@@ -13,9 +13,27 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
+          centerTitle: false,
+          leading: Icon(Icons.videocam),
           title: Text('Youtubeアプリ'),
+          actions: <Widget>[
+            SizedBox(
+              width: 44,
+              child: TextButton(
+                onPressed: () {},
+                child: Icon(Icons.search),
+              ),
+            ),
+            SizedBox(
+              width: 44,
+              child: TextButton(
+                onPressed: () {},
+                child: Icon(Icons.more_vert),
+              ),
+            ),
+          ],
         ),
-        body: Container(child: Center()),
+        body: Container(),
       ),
     );
   }
