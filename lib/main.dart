@@ -5,6 +5,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final items =
+      List<String>.generate(10000, (i) => '【Flutter】Youtubeアプリトレース part$i');
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -70,6 +73,39 @@ class MyApp extends StatelessWidget {
                       ],
                     ),
                   ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      contentPadding: EdgeInsets.all(8),
+                      leading: Image.network(
+                        'https://blog-media.startribune.com/randball/wp-content/uploads/2020/09/30104153/youtubetv.png',
+                      ),
+                      title: Column(
+                        children: [
+                          Text(
+                            items[index],
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(right: 16),
+                                child: Text('290回'),
+                              ),
+                              Text('3日前'),
+                            ],
+                          ),
+                        ],
+                      ),
+                      trailing: Icon(Icons.more_vert),
+                    );
+                  },
                 ),
               ),
             ],
