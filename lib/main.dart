@@ -8,19 +8,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Youtubeアプリ'),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Youtubeアプリ'),
+        ),
+        body: Container(child: Center()),
       ),
-      body: Container(child: Center()),
     );
   }
 }
