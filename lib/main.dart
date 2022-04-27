@@ -8,6 +8,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.white,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('Youtubeアプリ'),
