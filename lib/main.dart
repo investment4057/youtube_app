@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter/rendering.dart';
 import 'video_detail_page.dart';
 
 void main() {
+  debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
