@@ -96,9 +96,19 @@ class MyApp extends StatelessWidget {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(right: 16),
-                                child: Text('290回'),
+                                child: Text(
+                                  '290回',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
                               ),
-                              Text('3日前'),
+                              Text(
+                                '3日前',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                ),
+                              ),
                             ],
                           ),
                         ],
